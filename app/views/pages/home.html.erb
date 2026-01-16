@@ -1,8 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container mt-5">
+  <h1>Tweets Creator</h1>
+  <p>Shorter text and create great tweets easily using AI assistance.</p>
 
-<% if user_signed_in? %>
-  You are signed in as <%= current_user.email %>!
-<% else %>
-  You are not signed in.
-<% end %>
+  <div>
+    <%= link_to "Create a new Tweet", new_tweet_path, class: "btn btn-primary" %>
+  </div>
+
+  <div class="mt-4 mb-4">
+    <%= image_tag "tweet.png", alt: "AI Image", class: "image-home" %>
+  </div>
+
+  <% if user_signed_in? %>
+    You are signed in as <%= current_user.email %>!
+  <% else %>
+    You are not signed in.
+  <% end %>
+</div>
